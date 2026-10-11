@@ -1,0 +1,20 @@
+{
+  "name": "smartify",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @smartify/web run dev",
+    "dev:api": "tsx watch apps/api/src/server.ts",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "test": "SMARTIFY_DB_PATH=:memory: node --test --test-concurrency=1 --import tsx \"apps/**/*.test.ts\" \"packages/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@smartify/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^10.1.0",
+    "@smartify/db": "*",
+    "@smartify/engine": "*",
+    "@smartify/spotify": "*",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.20.3"
+  }
+}
